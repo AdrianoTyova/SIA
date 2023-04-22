@@ -1,5 +1,5 @@
 <template>
 <div>
- Ola como Vai
+    <h1>Dados</h1>
 </div>
 </template>
