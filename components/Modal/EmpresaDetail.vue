@@ -1,37 +1,26 @@
 <template>
 <v-row justify="center">
-    <v-dialog v-model="dialog" width="1024">
+    <v-dialog v-model="dialog" width="500">
         <template v-slot:activator="{ props }">
-            <v-btn color="green-lighten-2" variant="text" v-bind="props">
+            <v-btn color="green" v-bind="props" class="mt-3">
                 Detalhes
             </v-btn>
         </template>
         <v-card>
-            <v-card-text>
-                <v-container>
-                    <div class="d-flex justify-space-between">
-                        <div class="imgProdutoModal" :style="verImg()">
-                        </div>
-                        <div class="legendaProdutoModal">
-                            <h1 class="text-green">{{ produto.descricao }}</h1>
-                            <p class="text-grey-darken-2">Este produto foi escolhido devido a sua facilidade em crecer em tempo de frio</p>
-                        </div>
+            <v-card-text class="pa-0">
+                <div class="PaiImg d-flex justify-space-between flex-column pa-0">
+                    <div class="imgProdutoModal" :style="verImg()">
                     </div>
-                    <div class="recomendados">
-                        <h1 class="text-green text-center">Semententes</h1>
-                        <div class="produtosAvo d-flex justify-center align-center">
-                            <div class="produtosPai pt-8">
-                                <div class="produtosFilho" v-for="produt, index in produtos" :key="index">
-                                    <div class="produtosImg" :style="verImg2(produt.img)">
-                                    </div>
-                                    <div class="produtoslegenda">
-                                        <ModalSementeDetail :produto="produt" />
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="legendaProdutoModal pa-5">
+                        <div>
+                            <h1 class="text-green text-center">{{ empresa.descricao }}</h1>
+                            <p class="text-center">Angola - Huila - Humpata - Rua 11 de Novembro</p>
+                            <p class="text-grey-darken-2 text-center">Semente de otima qualidade e com resultados surpreendentes</p>
+                            <p class="text-grey-darken-2 text-center">Preço da Cebola: 20.000Kz - 100Kg</p>
                         </div>
+                        <v-btn elevation="4" rounded color="green" class="mt-8 mx-auto" width="300" @click="vender()">Vender</v-btn>
                     </div>
-                </v-container>
+                </div>
             </v-card-text>
             <v-card-actions>
                 <v-spacer></v-spacer>
@@ -47,53 +36,53 @@
 </v-row>
 </template>
 
-    
-    
 <script>
+import Swal from "sweetalert2"
 export default {
     props: {
-        produto: Object
+        empresa: Object
     },
 
     data: () => ({
         dialog: false,
-        produtos: [{
-                img: "/img/produtos/LataTomate.jpeg",
-                descricao: "Cenoura",
-            },
-            {
-                img: "/img/produtos/LataTomate2.jpeg",
-                descricao: "Batata",
-            },
-            {
-                img: "/img/produtos/SementeTomate5.jpeg",
-                descricao: "Cebola",
-            },
-            {
-                img: "/img/produtos/SementeTomate6.jpeg",
-                descricao: "Tomate",
-            },
-        ]
     }),
     methods: {
         verImg() {
-            return `background-image: url(${this.produto.img})`
+            return `background-image: url(${this.empresa.img})`
         },
-        verImg2(img) {
-            return `background-image: url(${img})`
+        vender() {
+            Swal.fire({
+                title: "Deseja Transporte?",
+                text: "Vamos enviar um transporte para a sua mercadoria",
+                icon: "info"
+            })
         }
     }
 }
 </script>
-    
-    
+
 <style lang="scss" scoped>
+.PaiImg {
+    width: 100%;
+}
+
 .imgProdutoModal {
-    width: 300px;
+    width: 100%;
     height: 300px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 80%;
+    background-size: cover;
+}
+
+.legendaProdutoModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .preco {
+        font-size: 22px;
+        font-weight: bold;
+    }
 }
 
 .recomendados {
@@ -113,14 +102,14 @@ export default {
 
             .produtosFilho {
                 width: 200px;
-                height: 400px;
+                height: 250px;
                 box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.3);
                 border-radius: 10px;
                 margin: auto;
 
                 .produtosImg {
                     width: 100%;
-                    height: 300px;
+                    height: 150px;
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: 80%;

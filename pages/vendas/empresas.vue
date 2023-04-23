@@ -16,9 +16,7 @@
                     </v-card-subtitle>
 
                     <v-card-actions>
-                        <v-btn color="green-lighten-2" variant="text">
-                            Detalhes
-                        </v-btn>
+                        <ModalEmpresaDetail :empresa="empresa" />
 
                         <v-spacer></v-spacer>
 
@@ -47,47 +45,47 @@ export default {
     data: () => ({
         show: false,
         empresas: [{
-                img: ",",
+                img: "/img/provincias/Luanda.jpeg",
                 descricao: "Fert Angola",
                 show: false
             },
             {
-                img: ",",
+                img: "/img/provincias/Luanda.jpeg",
                 descricao: "Fert Angola",
                 show: false
             },
             {
-                img: ",",
+                img: "/img/provincias/Luanda.jpeg",
                 descricao: "Fert Angola",
                 show: false
             },
             {
-                img: ",",
+                img: "/img/provincias/Luanda.jpeg",
                 descricao: "Fert Angola",
                 show: false
             },
             {
-                img: ",",
+                img: "/img/provincias/Luanda.jpeg",
                 descricao: "Fert Angola",
                 show: false
             },
             {
-                img: ",",
+                img: "/img/provincias/Luanda.jpeg",
                 descricao: "Fert Angola",
                 show: false
             },
             {
-                img: ",",
+                img: "/img/provincias/Luanda.jpeg",
                 descricao: "Fert Angola",
                 show: false
             },
             {
-                img: ",",
+                img: "/img/provincias/Luanda.jpeg",
                 descricao: "Fert Angola",
                 show: false
             },
             {
-                img: ",",
+                img: "/img/provincias/Luanda.jpeg",
                 descricao: "Fert Angola",
                 show: false
             },
