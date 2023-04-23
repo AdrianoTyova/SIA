@@ -1,6 +1,6 @@
 <template>
 <v-row justify="center">
-    <v-dialog v-model="dialog" width="1024">
+    <v-dialog v-model="dialog" width="800">
         <template v-slot:activator="{ props }">
             <v-btn color="green" v-bind="props" class="mt-3">
                 Detalhes
@@ -13,9 +13,16 @@
                         <div class="imgProdutoModal" :style="verImg()">
                         </div>
                         <div class="legendaProdutoModal">
-                            <h1 class="text-green">{{ produto.descricao }}</h1>
-                            <p class="text-grey-darken-2">Semente de otima qualidade e com resultados surpreendentes</p>
-                            <p>Empresa: FertiAngol</p>
+                            <div>
+                                <div class="d-flex justify-space-between align-center pr-4">
+                                    <h1 class="text-green">{{ produto.descricao }}</h1>
+                                    <span class="preco">20.000Kz</span>
+                                </div>
+                                <p class="text-grey-darken-2">Semente de otima qualidade e com resultados surpreendentes</p>
+                                <p>Empresa: FertiAngol</p>
+                                <p>Angola - Huila - Humpata - Rua 11 de Novembro</p>
+                            </div>
+                            <v-btn elevation="4" rounded color="green" class="mt-8 mx-auto" width="300">Comprar</v-btn>
                         </div>
                     </div>
                 </v-container>
@@ -63,6 +70,9 @@ export default {
     methods: {
         verImg() {
             return `background-image: url(${this.produto.img})`
+        },
+        comprar(){
+            
         }
     }
 }
@@ -76,7 +86,15 @@ export default {
     background-position: center;
     background-size: 80%;
 }
-
+.legendaProdutoModal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .preco{
+        font-size: 22px;
+        font-weight: bold;
+    }
+}
 .recomendados {
     h1 {
         margin-top: -40px;

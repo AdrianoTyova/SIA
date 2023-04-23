@@ -7,7 +7,10 @@
         </div>
     </div>
     <div class="recomendados">
-        <h1 class="text-green text-center">Produtos Recomendados</h1>
+        <div class="d-flex justify-space-around align-center">
+            <h1 class="text-green">Produtos Recomendados</h1>
+            <nuxt-link to="/plantacao/selecao"><v-btn small elevation="3" color="green">Iniciar Plantação</v-btn></nuxt-link>
+        </div>
         <div class="produtosAvo d-flex justify-center align-center">
             <div class="produtosPai pt-8">
                 <div class="produtosFilho" v-for="produto, index in produtos" :key="index">
@@ -103,10 +106,7 @@ export default {
     }
 
     .recomendados {
-        h1 {
-            margin-top: -40px;
-        }
-
+        margin-top: -40px;
         .produtosAvo {
             .produtosPai {
                 width: 90%;

@@ -10,19 +10,26 @@
     </div>
 </div>
 </template>
+
 <style>
-.principal{
+.principal {
     display: grid;
     grid-template-columns: .3fr .7fr;
     min-height: 700px;
     height: 100vh;
     overflow: hidden;
 }
-.PSide{
+
+.PSide {
     width: 350px;
 }
-.PContainer{
+
+.PContainer {
     width: 100%;
     overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
 }
 </style>

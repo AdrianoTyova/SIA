@@ -21,13 +21,11 @@
                         <h1 class="text-green text-center">Semententes</h1>
                         <div class="produtosAvo d-flex justify-center align-center">
                             <div class="produtosPai pt-8">
-                                <div class="produtosFilho" v-for="produto, index in produtos" :key="index">
-                                    <div class="produtosImg" :style="verImg(produto.img)">
+                                <div class="produtosFilho" v-for="produt, index in produtos" :key="index">
+                                    <div class="produtosImg" :style="verImg2(produt.img)">
                                     </div>
                                     <div class="produtoslegenda">
-                                        <div class="DivHr"></div>
-                                        <h2 class="text-green text-center">{{ produto.descricao }}</h2>
-                                        <ModalLojaSemente :produto="produto" />
+                                        <ModalSementeDetail :produto="produt" />
                                     </div>
                                 </div>
                             </div>
@@ -58,19 +56,19 @@ export default {
     data: () => ({
         dialog: false,
         produtos: [{
-                img: "/img/produtos/cenoura.jpeg",
+                img: "/img/produtos/LataTomate.jpeg",
                 descricao: "Cenoura",
             },
             {
-                img: "/img/produtos/batata.jpeg",
+                img: "/img/produtos/LataTomate2.jpeg",
                 descricao: "Batata",
             },
             {
-                img: "/img/produtos/cebola.jpeg",
+                img: "/img/produtos/SementeTomate5.jpeg",
                 descricao: "Cebola",
             },
             {
-                img: "/img/produtos/tomate.jpeg",
+                img: "/img/produtos/SementeTomate6.jpeg",
                 descricao: "Tomate",
             },
         ]
@@ -78,6 +76,9 @@ export default {
     methods: {
         verImg() {
             return `background-image: url(${this.produto.img})`
+        },
+        verImg2(img) {
+            return `background-image: url(${img})`
         }
     }
 }
@@ -109,14 +110,14 @@ export default {
 
             .produtosFilho {
                 width: 200px;
-                height: 250px;
+                height: 400px;
                 box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.3);
                 border-radius: 10px;
                 margin: auto;
 
                 .produtosImg {
                     width: 100%;
-                    height: 150px;
+                    height: 300px;
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: 80%;
