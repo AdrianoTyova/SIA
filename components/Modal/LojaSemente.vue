@@ -110,27 +110,27 @@ export default {
         dialog: false,
         produtos: [{
                 img: "/img/produtos/lata.jpeg",
-                descricao: "Cenoura",
+                descricao: "Semente de Couve",
             },
             {
                 img: "/img/produtos/SementeFeijao3.jpeg",
-                descricao: "Batata",
+                descricao: "Semente de Feijão",
             },
             {
                 img: "/img/produtos/SementeBatata5.jpeg",
-                descricao: "Batata",
+                descricao: "Semente de Batata",
             },
             {
                 img: "/img/produtos/LataTomate2.jpeg",
-                descricao: "Batata",
+                descricao: "Semente de Tomate",
             },
             {
                 img: "/img/produtos/SementeTomate5.jpeg",
-                descricao: "Cebola",
+                descricao: "Semente de Tomate",
             },
             {
                 img: "/img/produtos/SementeTomate6.jpeg",
-                descricao: "Tomate",
+                descricao: "Semente de Tomate",
             },
         ]
     }),

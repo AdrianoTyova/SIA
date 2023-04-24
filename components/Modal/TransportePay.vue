@@ -7,17 +7,30 @@
         <v-card>
             <v-card-text class="pa-0">
                 <div class="PaiImg d-flex justify-space-between flex-column pa-0">
-                    <div class="imgProdutoModal" :style="verImg()">
+                    <div class="pImg">
+                        <div class="imgOrigem">
+                            <div class="sombraI">
+                                <h1>Huíla</h1>
+                            </div>
+                        </div>
+                        <div class="imgProdutoModal" :style="verImg()">
+                            <div class="sombraI">
+                                <h1>Carrinha</h1>
+                            </div>
+                        </div>
+                        <div class="imgDestino">
+                            <div class="sombraI">
+                                <h1>Luanda</h1>
+                            </div>
+                        </div>
                     </div>
                     <div class="legendaProdutoModal pa-5">
                         <div>
-                            <h1 class="text-green text-center">Cebola FertAngol Carrinha Izuzo {{ transporte.descricao }}</h1>
-                            <p class="text-center">De Huíla para Luanda</p>
-                            <p class="text-grey-darken-2 text-center">Preço da Cebola: 20.000Kz - 20Kg</p>
-                            <p class="text-grey-darken-2 text-center">Qtd: - 1 + </p>
-                            <p class="text-grey-darken-2 text-center">Total a vender: 150.000Kz - 500Kg </p>
+                            <h1 class="text-green text-center">Cebola - Carrinha - FertAngol {{ transporte.descricao }}</h1>
+                            <p class="text-grey-darken-2 text-center">Venda 5.000.000Kz - 2Toneladas de cebola</p>
+                            <p class="text-grey-darken-2 text-center">Transporte 100.000Kz</p>
                         </div>
-                        <ModalSolicitarTransporte />
+                        <v-btn color="green" width="400" rounded class="mx-auto mt-8">Pagar Transporte</v-btn>
                     </div>
                 </div>
             </v-card-text>
@@ -35,12 +48,6 @@
 </v-row>
 </template>
 
-    
-        
-            
-            
-        
-    
 <script>
 import Swal from "sweetalert2"
 export default {
@@ -65,13 +72,15 @@ export default {
     }
 }
 </script>
-            
-            
-        
-    
+
 <style lang="scss" scoped>
 .PaiImg {
     width: 100%;
+}
+
+.pImg {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .imgProdutoModal {
@@ -82,6 +91,32 @@ export default {
     background-size: cover;
 }
 
+.imgOrigem {
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/img/provincias/huila.jpeg");
+}
+
+.imgDestino {
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/img/provincias/Luanda.jpeg");
+}
+.sombraI{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
 .legendaProdutoModal {
     display: flex;
     flex-direction: column;

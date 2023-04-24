@@ -47,36 +47,36 @@ export default {
     data: () => ({
         dialog: false,
         produtos: [{
-                img: "/img/produtos/cenoura.jpeg",
-                descricao: "Cenoura",
+                img: "/img/carros/fuso.jpg",
+                descricao: "Fuso",
             },
             {
-                img: "/img/produtos/batata.jpeg",
-                descricao: "Batata",
+                img: "/img/carros/izuzu.jpeg",
+                descricao: "Izuzu",
             },
             {
-                img: "/img/produtos/cebola.jpeg",
-                descricao: "Cebola",
+                img: "/img/carros/iz.jpeg",
+                descricao: "Izuzu",
             },
             {
-                img: "/img/produtos/tomate.jpeg",
-                descricao: "Tomate",
+                img: "/img/carros/hilux.jpeg",
+                descricao: "Hilux",
             },
             {
-                img: "/img/produtos/feijao.jpeg",
-                descricao: "Feijão",
+                img: "/img/carros/m.jpeg",
+                descricao: "Mitsubishi",
             },
             {
-                img: "/img/produtos/batata.jpeg",
-                descricao: "Batata",
+                img: "/img/carros/l200.jpeg",
+                descricao: "L 200",
             },
             {
-                img: "/img/produtos/cebola.jpeg",
-                descricao: "Cebola",
+                img: "/img/carros/mit.jpeg",
+                descricao: "Carrinha",
             },
             {
-                img: "/img/produtos/tomate.jpeg",
-                descricao: "Tomate",
+                img: "/img/carros/carro.png",
+                descricao: "Carrinha",
             },
         ]
     }),
@@ -142,7 +142,7 @@ export default {
                 height: 150px;
                 background-repeat: no-repeat;
                 background-position: center;
-                background-size: 80%;
+                background-size: cover;
                 border-radius: 10px 10px 0 0;
 
             }

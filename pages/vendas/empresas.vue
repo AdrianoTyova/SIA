@@ -4,8 +4,8 @@
     <div class="avo">
         <div class="pai">
             <div class="filho"  v-for="empresa, index in empresas" :key="index">
-                <v-card class="mx-auto" max-width="344">
-                    <v-img src="/img/provincias/Luanda.jpeg" height="200px" cover></v-img>
+                <v-card class="mx-auto" max-width="344" elevation="5">
+                    <v-img :src="empresa.img" height="200px" cover></v-img>
 
                     <v-card-title>
                         {{ empresa.descricao }}
@@ -45,48 +45,48 @@ export default {
     data: () => ({
         show: false,
         empresas: [{
-                img: "/img/provincias/Luanda.jpeg",
-                descricao: "Fert Angola",
+                img: "/img/empresas/fetiAngola.png",
+                descricao: "FertíAngola",
+                show: false
+            },
+            {
+                img: "/img/empresas/carrinho2.jpeg",
+                descricao: "Carrinho",
+                show: false
+            },
+            {
+                img: "/img/empresas/kero2.jpeg",
+                descricao: "Kero",
+                show: false
+            },
+            {
+                img: "/img/empresas/agrolider.png",
+                descricao: "AgroLider",
+                show: false
+            },
+            {
+                img: "/img/empresas/agrotrading.jpeg",
+                descricao: "Agrogest",
+                show: false
+            },
+            {
+                img: "/img/empresas/hodro.jpeg",
+                descricao: "Hidrobem",
+                show: false
+            },
+            {
+                img: "/img/empresas/brasa.jpeg",
+                descricao: "Brasafrica",
+                show: false
+            },
+            {
+                img: "/img/empresas/turi.png",
+                descricao: "Turiagro",
                 show: false
             },
             {
                 img: "/img/provincias/Luanda.jpeg",
-                descricao: "Fert Angola",
-                show: false
-            },
-            {
-                img: "/img/provincias/Luanda.jpeg",
-                descricao: "Fert Angola",
-                show: false
-            },
-            {
-                img: "/img/provincias/Luanda.jpeg",
-                descricao: "Fert Angola",
-                show: false
-            },
-            {
-                img: "/img/provincias/Luanda.jpeg",
-                descricao: "Fert Angola",
-                show: false
-            },
-            {
-                img: "/img/provincias/Luanda.jpeg",
-                descricao: "Fert Angola",
-                show: false
-            },
-            {
-                img: "/img/provincias/Luanda.jpeg",
-                descricao: "Fert Angola",
-                show: false
-            },
-            {
-                img: "/img/provincias/Luanda.jpeg",
-                descricao: "Fert Angola",
-                show: false
-            },
-            {
-                img: "/img/provincias/Luanda.jpeg",
-                descricao: "Fert Angola",
+                descricao: "AgroLuanda",
                 show: false
             },
 

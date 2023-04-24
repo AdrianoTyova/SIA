@@ -2,12 +2,17 @@
 <v-row justify="center">
     <v-dialog v-model="dialog" width="900">
         <template v-slot:activator="{ props }">
-            <v-btn  v-bind="props" elevation="4" rounded color="green" class="mt-8 mx-auto" width="300">Vender</v-btn>
+            <v-btn v-bind="props" elevation="4" rounded color="green" class="mt-8 mx-auto" width="300">Vender</v-btn>
         </template>
         <v-card>
             <v-card-text class="pa-0">
                 <div class="PaiImg d-flex justify-space-between flex-column pa-0">
-                    <div class="imgProdutoModal" :style="verImg()">
+                    <div class="pImg">
+                        <div class="imgProduto">
+
+                        </div>
+                        <div class="imgProdutoModal" :style="verImg()">
+                        </div>
                     </div>
                     <div class="legendaProdutoModal pa-5">
                         <div>
@@ -35,10 +40,6 @@
 </v-row>
 </template>
 
-    
-        
-        
-    
 <script>
 import Swal from "sweetalert2"
 export default {
@@ -63,14 +64,16 @@ export default {
     }
 }
 </script>
-        
-        
-    
+
 <style lang="scss" scoped>
 .PaiImg {
     width: 100%;
 }
 
+.pImg{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 .imgProdutoModal {
     width: 100%;
     height: 300px;
@@ -78,7 +81,14 @@ export default {
     background-position: center;
     background-size: cover;
 }
-
+.imgProduto{
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    background-image: url("/img/produtos/cebola.jpeg");
+}
 .legendaProdutoModal {
     display: flex;
     flex-direction: column;

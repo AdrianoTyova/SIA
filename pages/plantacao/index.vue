@@ -126,7 +126,7 @@ export default {
         >.img {
             height: 400px;
             border-radius: 10px;
-            background: url('/img/montanha.jpg') no-repeat center;
+            background: url('/img/fazendas/fazenda.webp') no-repeat center;
             background-size: cover;
         }
 

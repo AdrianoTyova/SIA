@@ -22,10 +22,6 @@ export default {
                 descricao: "Luanda",
             },
             {
-                img: "/img/provincias/huila.jpeg",
-                descricao: "Huíla",
-            },
-            {
                 img: "/img/provincias/Benguela.jpeg",
                 descricao: "Benguela",
             },
@@ -40,6 +36,10 @@ export default {
             {
                 img: "/img/provincias/Cabinda.jpeg",
                 descricao: "Cabinda",
+            },
+            {
+                img: "/img/provincias/huila.jpeg",
+                descricao: "Huíla",
             },
             {
                 img: "/img/provincias/Zaire.jpeg",
