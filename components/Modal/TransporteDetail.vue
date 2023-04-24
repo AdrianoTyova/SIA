@@ -13,13 +13,12 @@
                     </div>
                     <div class="legendaProdutoModal pa-5">
                         <div>
-                            <h1 class="text-green text-center">{{ empresa.descricao }}</h1>
+                            <h1 class="text-green text-center">{{ transporte.descricao }}</h1>
                             <p class="text-center">Angola - Huila - Humpata - Rua 11 de Novembro</p>
                             <p class="text-grey-darken-2 text-center">Semente de otima qualidade e com resultados surpreendentes</p>
                             <p class="text-grey-darken-2 text-center">Preço da Cebola: 20.000Kz - 100Kg</p>
                         </div>
-                        <ModalVendaEmpresa :empresa="empresa"/>
-
+                        <ModalTransportePay :transporte="transporte" />
                     </div>
                 </div>
             </v-card-text>
@@ -29,19 +28,21 @@
                     Fechar
                 </v-btn>
                 <!-- <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
-                        Comprar
-                    </v-btn> -->
+                            Comprar
+                        </v-btn> -->
             </v-card-actions>
         </v-card>
     </v-dialog>
 </v-row>
 </template>
 
+    
+    
 <script>
 import Swal from "sweetalert2"
 export default {
     props: {
-        empresa: Object
+        transporte: Object
     },
 
     data: () => ({
@@ -49,7 +50,7 @@ export default {
     }),
     methods: {
         verImg() {
-            return `background-image: url(${this.empresa.img})`
+            return `background-image: url(${this.transporte.img})`
         },
         vender() {
             Swal.fire({
@@ -61,7 +62,8 @@ export default {
     }
 }
 </script>
-
+    
+    
 <style lang="scss" scoped>
 .PaiImg {
     width: 100%;

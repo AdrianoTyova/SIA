@@ -3,13 +3,51 @@
     <div class="divCimaPai">
         <div class="img"></div>
         <div class="dados">
-            <h1>Informações da Fazenda</h1>
+            <div class="Dados1">
+                <div class="d-flex justify-space-between align-center">
+                    <div>
+                        <h1>Hoje Quarta-feira</h1>
+                        <p class="text-white">Humpata - 17ºC</p>
+                    </div>
+                    <div>ol</div>
+                </div>
+            </div>
+            <div class="Dados2">
+                <div class="d-flex justify-center flex-column text-center">
+                    <h2>25 <span>ºC</span></h2>
+                    <h3>Temperatura</h3>
+                    <p>Média semanal</p>
+                </div>
+            </div>
+            <div class="Dados3">
+                <div class="d-flex justify-center flex-column text-center">
+                    <h2>20</h2>
+                    <h3>Hectares</h3>
+                    <p>para cultivo</p>
+                </div>
+            </div>
+            <div class="Dados4">
+                <div class="d-flex justify-center flex-column text-center">
+                    <h2>16</h2>
+                    <h3>Trabalhadores</h3>
+                    <p>Ativos</p>
+                </div>
+            </div>
+            <div class="Dados5">
+                <div class="d-flex justify-center flex-column text-center">
+                    <h2>5</h2>
+                    <h3>Produtos</h3>
+                    <p>Em plantação</p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="recomendados">
         <div class="d-flex justify-space-around align-center">
             <h1 class="text-green">Produtos Recomendados</h1>
-            <nuxt-link to="/plantacao/selecao"><v-btn small elevation="3" color="green">Iniciar Plantação</v-btn></nuxt-link>
+            <nuxt-link to="/plantacao/selecao">
+                <v-btn small elevation="3" color="green">Iniciar Plantação</v-btn>
+            </nuxt-link>
         </div>
         <div class="produtosAvo d-flex justify-center align-center">
             <div class="produtosPai pt-8">
@@ -52,16 +90,16 @@ export default {
                 descricao: "Feijão",
             },
             {
-                img: "/img/produtos/batata.jpeg",
+                img: "/img/produtos/couve.jpeg",
+                descricao: "Couve",
+            },
+            {
+                img: "/img/produtos/Repolho.jpeg",
+                descricao: "Repolho",
+            },
+            {
+                img: "/img/produtos/SementeBatata4.jpeg",
                 descricao: "Batata",
-            },
-            {
-                img: "/img/produtos/cebola.jpeg",
-                descricao: "Cebola",
-            },
-            {
-                img: "/img/produtos/tomate.jpeg",
-                descricao: "Tomate",
             },
         ]
     }),
@@ -78,35 +116,101 @@ export default {
     padding: 10px;
 
     .divCimaPai {
-        width: 95%;
         margin: 20px;
         border-radius: 20px;
         margin: auto;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: .6fr .4fr;
+        margin-top: 100px;
 
         >.img {
-            width: 100%;
-            height: 300px;
+            height: 400px;
             border-radius: 10px;
             background: url('/img/montanha.jpg') no-repeat center;
             background-size: cover;
         }
 
         >.dados {
-            width: 90%;
-            background-color: #fff;
+            width: 100%;
             height: 400px;
+            background-color: #fff;
             margin: auto;
-            padding: 20px;
-            transform: translateY(-100px);
+            padding: 0 20px;
             border-radius: 10px;
-            box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.3);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 'a a'
+                'b c'
+                'd e';
+            gap: 20px;
+
+            >div {
+                box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.3);
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 10px;
+
+                h2 {
+                    font-size: 30px;
+                    color: #43A047;
+                    span{
+                        font-size: 14px;
+                    }
+                }
+                h3{
+                    font-size: 16px;
+                    color: #555;
+                }
+                p{
+                    font-size: 14px;
+                    color: #aaa;
+                }
+            }
+
+            .Dados1 {
+                grid-area: a;
+                background-image: linear-gradient(45deg, #43A047, #81C784);
+
+                >div {
+                    width: 100%;
+                    height: 100%;
+                    color: #fff;
+                    padding: 0 10px;
+
+                    h1 {
+                        font-size: 14px;
+                    }
+
+                    p {
+                        font-size: 23px;
+                    }
+                }
+            }
+
+            .Dados2 {
+                grid-area: b;
+            }
+
+            .Dados3 {
+                grid-area: c;
+            }
+
+            .Dados4 {
+                grid-area: d;
+            }
+
+            .Dados5 {
+                grid-area: e;
+            }
+
         }
     }
 
     .recomendados {
-        margin-top: -40px;
+        margin-top: 40px;
+
         .produtosAvo {
             .produtosPai {
                 width: 90%;

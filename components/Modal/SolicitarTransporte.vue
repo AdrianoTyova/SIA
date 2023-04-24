@@ -2,24 +2,22 @@
 <v-row justify="center">
     <v-dialog v-model="dialog" width="500">
         <template v-slot:activator="{ props }">
-            <v-btn color="green" v-bind="props" class="mt-3">
-                Detalhes
-            </v-btn>
+            <v-btn v-bind="props" elevation="4" rounded color="green" class="mt-8 mx-auto" width="300">Seguinte</v-btn>
         </template>
         <v-card>
+            <v-card-title class="bg-green pa-4">
+                <h1 class="text-white text-center">Deseja Transporte?</h1>
+            </v-card-title>
             <v-card-text class="pa-0">
                 <div class="PaiImg d-flex justify-space-between flex-column pa-0">
-                    <div class="imgProdutoModal" :style="verImg()">
-                    </div>
                     <div class="legendaProdutoModal pa-5">
                         <div>
-                            <h1 class="text-green text-center">{{ empresa.descricao }}</h1>
-                            <p class="text-center">Angola - Huila - Humpata - Rua 11 de Novembro</p>
-                            <p class="text-grey-darken-2 text-center">Semente de otima qualidade e com resultados surpreendentes</p>
-                            <p class="text-grey-darken-2 text-center">Preço da Cebola: 20.000Kz - 100Kg</p>
+                            <p class="text-center">Pode solicitar um transporte para a sua mercadoria ou continuar para o pagamento</p>
                         </div>
-                        <ModalVendaEmpresa :empresa="empresa"/>
-
+                        <div class="d-flex align-center justify-center">
+                            <ModalTransportes />
+                            <ModalPagamentos :empresa="empresa" />
+                        </div>
                     </div>
                 </div>
             </v-card-text>
@@ -29,8 +27,8 @@
                     Fechar
                 </v-btn>
                 <!-- <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
-                        Comprar
-                    </v-btn> -->
+                                    Comprar
+                                </v-btn> -->
             </v-card-actions>
         </v-card>
     </v-dialog>

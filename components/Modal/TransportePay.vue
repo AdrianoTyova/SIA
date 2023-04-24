@@ -1,10 +1,8 @@
 <template>
 <v-row justify="center">
-    <v-dialog v-model="dialog" width="500">
+    <v-dialog v-model="dialog" width="900">
         <template v-slot:activator="{ props }">
-            <v-btn color="green" v-bind="props" class="mt-3">
-                Detalhes
-            </v-btn>
+            <v-btn v-bind="props" elevation="4" rounded color="green" class="mt-8 mx-auto" width="300">Solicitar Transporte</v-btn>
         </template>
         <v-card>
             <v-card-text class="pa-0">
@@ -13,13 +11,13 @@
                     </div>
                     <div class="legendaProdutoModal pa-5">
                         <div>
-                            <h1 class="text-green text-center">{{ empresa.descricao }}</h1>
-                            <p class="text-center">Angola - Huila - Humpata - Rua 11 de Novembro</p>
-                            <p class="text-grey-darken-2 text-center">Semente de otima qualidade e com resultados surpreendentes</p>
-                            <p class="text-grey-darken-2 text-center">Preço da Cebola: 20.000Kz - 100Kg</p>
+                            <h1 class="text-green text-center">Cebola FertAngol Carrinha Izuzo {{ transporte.descricao }}</h1>
+                            <p class="text-center">De Huíla para Luanda</p>
+                            <p class="text-grey-darken-2 text-center">Preço da Cebola: 20.000Kz - 20Kg</p>
+                            <p class="text-grey-darken-2 text-center">Qtd: - 1 + </p>
+                            <p class="text-grey-darken-2 text-center">Total a vender: 150.000Kz - 500Kg </p>
                         </div>
-                        <ModalVendaEmpresa :empresa="empresa"/>
-
+                        <ModalSolicitarTransporte />
                     </div>
                 </div>
             </v-card-text>
@@ -29,19 +27,25 @@
                     Fechar
                 </v-btn>
                 <!-- <v-btn color="blue-darken-1" variant="text" @click="dialog = false">
-                        Comprar
-                    </v-btn> -->
+                                    Comprar
+                                </v-btn> -->
             </v-card-actions>
         </v-card>
     </v-dialog>
 </v-row>
 </template>
 
+    
+        
+            
+            
+        
+    
 <script>
 import Swal from "sweetalert2"
 export default {
     props: {
-        empresa: Object
+        transporte: Object
     },
 
     data: () => ({
@@ -49,7 +53,7 @@ export default {
     }),
     methods: {
         verImg() {
-            return `background-image: url(${this.empresa.img})`
+            return `background-image: url(${this.transporte.img})`
         },
         vender() {
             Swal.fire({
@@ -61,7 +65,10 @@ export default {
     }
 }
 </script>
-
+            
+            
+        
+    
 <style lang="scss" scoped>
 .PaiImg {
     width: 100%;
