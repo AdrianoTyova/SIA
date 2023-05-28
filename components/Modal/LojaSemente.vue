@@ -108,18 +108,7 @@ export default {
 
     data: () => ({
         dialog: false,
-        produtos: [{
-                img: "/img/produtos/lata.jpeg",
-                descricao: "Semente de Couve",
-            },
-            {
-                img: "/img/produtos/SementeFeijao3.jpeg",
-                descricao: "Semente de Feijão",
-            },
-            {
-                img: "/img/produtos/SementeBatata5.jpeg",
-                descricao: "Semente de Batata",
-            },
+        produtos: [
             {
                 img: "/img/produtos/LataTomate2.jpeg",
                 descricao: "Semente de Tomate",
@@ -130,6 +119,14 @@ export default {
             },
             {
                 img: "/img/produtos/SementeTomate6.jpeg",
+                descricao: "Semente de Tomate",
+            },
+            {
+                img: "/img/produtos/SementeTomate8.jpeg",
+                descricao: "Semente de Tomate",
+            },
+            {
+                img: "/img/produtos/SementeTomate7.jpeg",
                 descricao: "Semente de Tomate",
             },
         ]
