@@ -20,6 +20,8 @@
     overflow: hidden;
 }
 
+
+
 .PSide {
     width: 350px;
 }
@@ -31,5 +33,15 @@
 
 a {
     text-decoration: none;
+}
+
+@media (max-width: 1050px) {
+    .principal {
+        grid-template-columns: 1fr;
+    }
+
+    .PSide {
+        width: 0;
+    }
 }
 </style>

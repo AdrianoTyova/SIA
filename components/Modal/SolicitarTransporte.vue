@@ -6,7 +6,7 @@
         </template>
         <v-card>
             <v-card-title class="bg-green pa-4">
-                <h1 class="text-white text-center">Deseja Transporte?</h1>
+                <h1 class="H1SolicitarTransporte text-white text-center">Deseja Transporte?</h1>
             </v-card-title>
             <v-card-text class="pa-0">
                 <div class="PaiImg d-flex justify-space-between flex-column pa-0">
@@ -14,7 +14,7 @@
                         <div>
                             <p class="text-center">Pode solicitar um transporte para a sua mercadoria ou continuar para o pagamento</p>
                         </div>
-                        <div class="d-flex align-center justify-center">
+                        <div class="doisbotoes d-flex align-center justify-center">
                             <ModalTransportes />
                             <ModalPagamentos :empresa="empresa" />
                         </div>
@@ -63,6 +63,9 @@ export default {
 <style lang="scss" scoped>
 .PaiImg {
     width: 100%;
+}
+.H1SolicitarTransporte{
+    font-size: 20px;
 }
 
 .imgProdutoModal {
@@ -133,6 +136,12 @@ export default {
             }
         }
 
+    }
+}
+
+@media (max-width: 550px) {
+    .doisbotoes{
+        flex-direction: column;
     }
 }
 </style>

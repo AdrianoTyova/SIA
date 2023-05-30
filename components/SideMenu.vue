@@ -93,4 +93,40 @@ export default {
         }
     }
 }
+
+@media (max-width: 1050px) {
+    .sideBar {
+        width: 100%;
+        height: 100%;
+        padding: 20px 30px;
+        display: none;
+
+        .hrDiv {
+            height: 1px;
+            background-color: #ccc;
+            margin-top: 20px;
+        }
+
+        .paiUlDiv {
+            height: 100%;
+
+            .ulDiv {
+                margin-top: 60px;
+
+                >a {
+                    color: #fff;
+                    text-decoration: none;
+
+                    .liDiv {
+                        margin: 50px 0;
+                    }
+
+                    p {
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
+    }
+}
 </style>

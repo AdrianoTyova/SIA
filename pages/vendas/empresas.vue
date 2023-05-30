@@ -3,7 +3,7 @@
     <h1 class="text-center text-green mt-10">Empresas - Luanda - Cebola</h1>
     <div class="avo">
         <div class="pai">
-            <div class="filho"  v-for="empresa, index in empresas" :key="index">
+            <div class="filho" v-for="empresa, index in empresas" :key="index">
                 <v-card class="mx-auto" max-width="344" elevation="5">
                     <v-img :src="empresa.img" height="200px" cover></v-img>
 
@@ -96,13 +96,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.avo{
+.avo {
     padding: 20px;
-    .pai{
+
+    .pai {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
     }
 }
-</style>
 
+@media (max-width: 1200px) {
+    .avo {
+        .pai {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .avo {
+        .pai {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .avo {
+        .pai {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+</style>

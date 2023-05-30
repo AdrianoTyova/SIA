@@ -16,7 +16,7 @@
                     </div>
                     <div class="legendaProdutoModal pa-5">
                         <div>
-                            <h1 class="text-green text-center">Venda de cebola para a empresa {{ empresa.descricao }}</h1>
+                            <h1 class="tituloH1Venda text-green text-center">Venda de cebola para a empresa {{ empresa.descricao }}</h1>
                             <p class="text-center">De Huíla para Luanda</p>
                             <p class="text-grey-darken-2 text-center">Preço da Cebola: 20.000Kz - 20Kg</p>
                             <p class="text-grey-darken-2 text-center">Qtd: - 1 + </p>
@@ -70,10 +70,21 @@ export default {
     width: 100%;
 }
 
-.pImg{
+.pImg {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+@media (max-width: 600px) {
+    .pImg {
+        grid-template-columns: 1fr;
+    }
+    .tituloH1Venda{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
+
 .imgProdutoModal {
     width: 100%;
     height: 300px;
@@ -81,7 +92,8 @@ export default {
     background-position: center;
     background-size: cover;
 }
-.imgProduto{
+
+.imgProduto {
     width: 100%;
     height: 300px;
     background-repeat: no-repeat;
@@ -89,6 +101,7 @@ export default {
     background-size: 80%;
     background-image: url("/img/produtos/cebola.jpeg");
 }
+
 .legendaProdutoModal {
     display: flex;
     flex-direction: column;

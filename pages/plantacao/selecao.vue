@@ -1,7 +1,7 @@
 <template>
 <div class="Selecao pa-10">
     <div class="imgFazenda rounded-xl">
-        <div class="sombra  pa-10 rounded-xl">
+        <div class="sombra pa-10 rounded-xl">
             <h1 class="text-center text-white">Selecione o produto para ver o seu processo evolutivo</h1>
         </div>
     </div>
@@ -98,5 +98,56 @@ export default {
         }
     }
 
+}
+
+@media (max-width: 1200px) {
+    .Selecao {
+        .sombra {
+            h1 {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .Selecao {
+        .avo {
+            .pai {
+                grid-template-columns: repeat(2, 1fr);
+
+                .filho {
+                    height: 200px;
+
+                    h2 {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 420px) {
+    .Selecao {
+        .sombra {
+            h1 {
+                font-size: 19px;
+            }
+        }
+        .avo {
+            .pai {
+                .filho {
+                    height: 150px;
+
+                    h2 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+    }
 }
 </style>

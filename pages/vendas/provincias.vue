@@ -65,8 +65,7 @@ export default {
                 img: "/img/provincias/Bengo.jpeg",
                 descricao: "Bengo",
             },
-            
-           
+
         ]
     }),
     methods: {
@@ -87,6 +86,14 @@ export default {
 .Selecao {
     .sombra {
         @include sombra()
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
     }
 
     .imgFazenda {
@@ -119,11 +126,104 @@ export default {
                 box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.3);
 
                 h2 {
-                    font-size: 30px;
+                    font-size: 25px;
                 }
             }
         }
     }
 
+}
+
+@media (max-width: 900px) {
+    .Selecao {
+        h1 {
+            font-size: 22px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        .avo {
+            .pai {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+    }
+}
+
+@media (max-width: 750px) {
+    .Selecao {
+        h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 17px;
+    }
+        .avo {
+            .pai {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+    }
+}
+
+@media (max-width: 620px) {
+    .Selecao {
+        .avo {
+            .pai {
+                grid-template-columns: repeat(3, 1fr);
+
+                .filho {
+                    height: 150px;
+
+                    h2 {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 470px) {
+    .Selecao {
+        .avo {
+            .pai {
+                grid-template-columns: repeat(3, 1fr);
+
+                .filho {
+                    height: 100px;
+
+                    h2 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 420px) {
+    .Selecao {
+        .avo {
+            .pai {
+                grid-template-columns: repeat(2, 1fr);
+
+                .filho {
+                    height: 150px;
+
+                    h2 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+    }
 }
 </style>
