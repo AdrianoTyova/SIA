@@ -6,7 +6,7 @@
         </template>
         <v-card>
             <v-card-title class="bg-green pa-4">
-                <h1 class="text-white text-center">Escolha o seu transporte</h1>
+                <h1 class="H1TituloTrans text-white text-center">Escolha o seu transporte</h1>
             </v-card-title>
             <v-card-text class="pa-0">
                 <div class="PaiImg d-flex justify-space-between flex-column pa-0">
@@ -22,7 +22,7 @@
                                     <div class="produtoslegenda">
                                         <div class="DivHr"></div>
                                         <h2 class="text-green text-center">{{ produto.descricao }}</h2>
-                                        <ModalTransporteDetail :transporte="produto"/>
+                                        <ModalTransporteDetail :transporte="produto" />
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +99,9 @@ export default {
 .PaiImg {
     width: 100%;
 }
-
+.H1TituloTrans{
+    font-size: 20px;
+}
 .imgProdutoModal {
     width: 100%;
     height: 300px;
@@ -164,5 +166,70 @@ export default {
         }
     }
 
+}
+
+@media (max-width: 1200px) {
+    .produtosAvo {
+
+        .produtosPai {
+            width: 100%;
+            grid-template-columns: 1fr 1fr 1fr;
+
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .produtosAvo {
+
+        .produtosPai {
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .produtosAvo {
+        .produtosPai {
+            grid-template-columns: 1fr 1fr;
+
+            .produtosFilho {
+                width: 200px;
+                height: 250px;
+
+            }
+
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .produtosAvo {
+        .produtosPai {
+            grid-template-columns: 1fr;
+
+            .produtosFilho {
+                width: 300px;
+                height: 250px;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .produtosAvo {
+        .produtosPai {
+            grid-template-columns: 1fr;
+
+            .produtosFilho {
+                width: 100%;
+                height: 250px;
+            }
+
+        }
+    }
 }
 </style>

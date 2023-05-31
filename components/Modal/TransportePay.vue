@@ -26,7 +26,7 @@
                     </div>
                     <div class="legendaProdutoModal pa-5">
                         <div>
-                            <h1 class="text-green text-center">Cebola - Carrinha - FertAngol {{ transporte.descricao }}</h1>
+                            <h1 class="h1TituloTranspay text-green text-center">Cebola - Carrinha - FertAngol {{ transporte.descricao }}</h1>
                             <p class="text-grey-darken-2 text-center">Venda 5.000.000Kz - 2Toneladas de cebola</p>
                             <p class="text-grey-darken-2 text-center">Transporte 100.000Kz</p>
                         </div>
@@ -108,7 +108,8 @@ export default {
     background-size: cover;
     background-image: url("/img/provincias/Luanda.jpeg");
 }
-.sombraI{
+
+.sombraI {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
@@ -117,6 +118,7 @@ export default {
     justify-content: center;
     color: #fff;
 }
+
 .legendaProdutoModal {
     display: flex;
     flex-direction: column;
@@ -177,6 +179,15 @@ export default {
             }
         }
 
+    }
+}
+
+@media (max-width: 700px) {
+    .pImg {
+        display: none;
+    }
+    .h1TituloTranspay{
+        font-size: 20px;
     }
 }
 </style>
