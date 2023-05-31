@@ -31,7 +31,7 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="recomendados">
+                    <div class="recomendados aparecer">
                         <h1 class="text-green text-center">Semententes</h1>
                         <div class="produtosAvo d-flex justify-center align-center apareceDesktop">
                             <div class="produtosPai">
@@ -51,19 +51,46 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="recomendados2">
+                    <div class="recomendados desaparecer">
                         <h1 class="text-green text-center">Semententes</h1>
-                        <div class="produtosPai2">
-                            <div class="produtosFilho2" v-for="produt, index in produtos" :key="index">
-                                <div class="produtosImg d-flex justify-space-between flex-column" :style="verImg2(produt.img)">
-                                    <div class="sombra"></div>
-                                    <div class="produtoslegenda">
-                                        <ModalSementeDetail :produto="produt" />
-                                    </div>
-                                </div>
+                        <div class="produtosAvo d-flex justify-center align-center apareceDesktop">
+                            <div class="produtosPai">
+                                <Swiper class="divSwiper ma-auto" :slides-per-view="2" :modules="modules" :space-between="10" @swiper="onSwiper" @slideChange="onSlideChange" :freeMode="true" :pagination="{clickable: true,}">
+                                    <SwiperSlide v-for="produt, index in produtos" :key="index">
+                                        <div class="produtosFilho">
+                                            <div class="produtosImg d-flex justify-space-between flex-column" :style="verImg2(produt.img)">
+                                                <div class="sombra"></div>
+                                                <div class="produtoslegenda">
+                                                    <ModalSementeDetail :produto="produt" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </SwiperSlide>
+                                </Swiper>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
+                    <div class="recomendados terceiroap">
+                        <h1 class="text-green text-center">Semententes</h1>
+                        <div class="produtosAvo d-flex justify-center align-center apareceDesktop">
+                            <div class="produtosPai">
+                                <Swiper class="divSwiper ma-auto" :slides-per-view="1" :modules="modules" :space-between="10" @swiper="onSwiper" @slideChange="onSlideChange" :freeMode="true" :pagination="{clickable: true,}">
+                                    <SwiperSlide v-for="produt, index in produtos" :key="index">
+                                        <div class="produtosFilho">
+                                            <div class="produtosImg d-flex justify-space-between flex-column" :style="verImg2(produt.img)">
+                                                <div class="sombra"></div>
+                                                <div class="produtoslegenda">
+                                                    <ModalSementeDetail :produto="produt" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </SwiperSlide>
+                                </Swiper>
+                            </div>
+                        </div>
+                    </div>
                 </v-container>
             </v-card-text>
             <v-card-actions>
@@ -167,6 +194,13 @@ export default {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px 10px 0 0;
+}
+
+.desaparecer {
+    display: none;
+}
+.terceiroap{
+    display: none;
 }
 
 .recomendados {
@@ -285,5 +319,24 @@ export default {
 
         }
     }
+}
+
+@media(max-width: 700px) {
+    .aparecer {
+        display: none;
+    }
+
+    .desaparecer {
+        display: block;
+    }
+}
+
+@media(max-width: 500px) {
+    .desaparecer {
+        display: none;
+    }
+    .terceiroap{
+    display: block;
+}
 }
 </style>

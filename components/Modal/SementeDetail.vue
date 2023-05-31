@@ -9,13 +9,13 @@
         <v-card>
             <v-card-text>
                 <v-container>
-                    <div class="d-flex justify-space-between">
+                    <div class="divPaiSemen d-flex justify-space-between">
                         <div class="imgProdutoModal" :style="verImg()">
                         </div>
                         <div class="legendaProdutoModal">
                             <div>
-                                <div class="d-flex justify-space-between align-center pr-4">
-                                    <h1 class="text-green">{{ produto.descricao }}</h1>
+                                <div class="QuebraLetra d-flex justify-space-between align-center pr-4">
+                                    <h1 class="H1LetraSemente text-green">{{ produto.descricao }}</h1>
                                     <span class="preco">20.000Kz</span>
                                 </div>
                                 <p class="text-grey-darken-2">Semente de otima qualidade e com resultados surpreendentes</p>
@@ -86,6 +86,10 @@ export default {
     background-position: center;
     background-size: 80%;
 }
+
+.H1LetraSemente{
+    font-size: 20px;
+}
 .legendaProdutoModal{
     display: flex;
     flex-direction: column;
@@ -144,6 +148,22 @@ export default {
             }
         }
 
+    }
+}
+
+@media (max-width: 660px){ 
+    .divPaiSemen{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .imgProdutoModal{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 450px){ 
+    .QuebraLetra{
+        flex-direction: column;
     }
 }
 </style>
