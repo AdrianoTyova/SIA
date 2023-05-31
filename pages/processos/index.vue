@@ -1,13 +1,30 @@
 <template>
 <div>
     <div class="d-flex justify-space-around align-center mt-8">
-        <h1 class="text-green">Processo Evolutivo</h1>
+        <h1 class="text-green H1TituloProcessos">Processo Evolutivo</h1>
         <nuxt-link to="/vendas/provincias">
             <v-btn small elevation="3" color="green">Vender</v-btn>
         </nuxt-link>
     </div>
-    <v-card class="pa-10 ma-10" elevation="0">
+    <v-card class="pa-5 aparecerDesktop" elevation="0">
         <v-timeline align="start">
+            <v-timeline-item v-for="(item, i) in items" :key="i" :dot-color="item.color" :icon="item.icon" fill-dot>
+                <v-card>
+                    <v-card-title :class="['text-h6', 'cardTitulo', `bg-${item.color}`]">
+                        {{ item.titulo }}
+                    </v-card-title>
+                    <v-card-text class="bg-white text--primary pa-5">
+                        <p>{{ item.descricao }}</p>
+                        <v-btn :color="item.color" variant="outlined" class="mt-5">
+                            Detalhes
+                        </v-btn>
+                    </v-card-text>
+                </v-card>
+            </v-timeline-item>
+        </v-timeline>
+    </v-card>
+    <v-card class="pa-5 aparecerMobile" elevation="0">
+        <v-timeline align="start" side="start">
             <v-timeline-item v-for="(item, i) in items" :key="i" :dot-color="item.color" :icon="item.icon" fill-dot>
                 <v-card>
                     <v-card-title :class="['text-h6', `bg-${item.color}`]">
@@ -84,8 +101,7 @@ export default {
                 titulo: "Pesticidas Naturais",
                 descricao: "Uso de pesticidas naturais: utilizar produtos naturais como óleos essenciais, extratos de plantas e sabão inseticida pode ajudar a controlar pragas de forma mais segura e sustentável do que o uso de pesticidas químicos."
             },
-            
-            
+
             {
                 color: 'green-darken-4',
                 icon: 'mdi-layers-triple',
@@ -108,8 +124,30 @@ export default {
     }),
 }
 </script>
+
 <style>
-a{
+a {
     text-decoration: none;
+}
+
+.aparecerMobile {
+    display: none;
+}
+
+@media (max-width: 680px) {
+    .H1TituloProcessos {
+        font-size: 20px;
+    }
+
+    .aparecerDesktop {
+        display: none;
+    }
+
+    .aparecerMobile {
+        display: block;
+    }
+    .cardTitulo{
+        font-size: 12px;
+    }
 }
 </style>
