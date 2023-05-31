@@ -8,7 +8,7 @@
             <NuxtPage />
         </div>
         <div class="menubaixo pa-5 ">
-            <ul class="bg-green  pa-5 d-flex justify-space-between align-center">
+            <ul class="bg-green pa-5 d-flex justify-space-between align-center">
                 <li>
                     <nuxt-link to="/">Inicio</nuxt-link>
                 </li>
@@ -30,6 +30,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    display: none;
 
     ul {
         margin: auto;
@@ -74,6 +75,9 @@ a {
 
     .PSide {
         width: 0;
+    }
+    .menubaixo{
+        display: block;
     }
 }
 </style>
