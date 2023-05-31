@@ -33,7 +33,7 @@
                     </div> -->
                     <div class="recomendados">
                         <h1 class="text-green text-center">Semententes</h1>
-                        <div class="produtosAvo d-flex justify-center align-center">
+                        <div class="produtosAvo d-flex justify-center align-center apareceDesktop">
                             <div class="produtosPai">
                                 <Swiper class="divSwiper ma-auto" :slides-per-view="3" :modules="modules" :space-between="10" @swiper="onSwiper" @slideChange="onSlideChange" :freeMode="true" :pagination="{clickable: true,}">
                                     <SwiperSlide v-for="produt, index in produtos" :key="index">
@@ -48,10 +48,22 @@
                                         </div>
                                     </SwiperSlide>
                                 </Swiper>
-
                             </div>
                         </div>
                     </div>
+                    <!-- <div class="recomendados2">
+                        <h1 class="text-green text-center">Semententes</h1>
+                        <div class="produtosPai2">
+                            <div class="produtosFilho2" v-for="produt, index in produtos" :key="index">
+                                <div class="produtosImg d-flex justify-space-between flex-column" :style="verImg2(produt.img)">
+                                    <div class="sombra"></div>
+                                    <div class="produtoslegenda">
+                                        <ModalSementeDetail :produto="produt" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                 </v-container>
             </v-card-text>
             <v-card-actions>
@@ -108,8 +120,7 @@ export default {
 
     data: () => ({
         dialog: false,
-        produtos: [
-            {
+        produtos: [{
                 img: "/img/produtos/LataTomate2.jpeg",
                 descricao: "Semente de Tomate",
             },
@@ -150,7 +161,8 @@ export default {
     background-position: center;
     background-size: 80%;
 }
-.sombra{
+
+.sombra {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
@@ -213,6 +225,65 @@ export default {
             }
         }
 
+    }
+}
+
+@media (max-width: 900px) {
+    .recomendados {
+        .produtosAvo {
+            .produtosPai {
+                height: 300px;
+
+                .divSwiper {
+                    height: 370px;
+                }
+
+                .produtosFilho {
+                    width: 200px;
+                    height: 200px;
+
+                    .produtosImg {
+                        height: 200px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    .ImgFundo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .legendaProdutoModal {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .recomendados {
+        .produtosAvo {
+            .produtosPai {
+                height: 300px;
+
+                .divSwiper {
+                    height: 370px;
+                }
+
+                .produtosFilho {
+                    width: 170px;
+                    height: 200px;
+
+                    .produtosImg {
+                        height: 200px;
+                    }
+                }
+            }
+
+        }
     }
 }
 </style>
