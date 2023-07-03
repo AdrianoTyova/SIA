@@ -2,6 +2,8 @@
 declare module 'vue' {
   export interface GlobalComponents {
     'ModalEmpresaDetail': typeof import("../components/Modal/EmpresaDetail.vue")['default']
+    'ModalFinanciamentoCadastrar': typeof import("../components/Modal/Financiamento/Cadastrar.vue")['default']
+    'ModalFinanciamentoDetalhes': typeof import("../components/Modal/Financiamento/Detalhes.vue")['default']
     'ModalLojaSemente': typeof import("../components/Modal/LojaSemente.vue")['default']
     'ModalPagamentos': typeof import("../components/Modal/Pagamentos.vue")['default']
     'ModalSementeDetail': typeof import("../components/Modal/SementeDetail.vue")['default']
@@ -30,6 +32,8 @@ declare module 'vue' {
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyModalEmpresaDetail': typeof import("../components/Modal/EmpresaDetail.vue")['default']
+    'LazyModalFinanciamentoCadastrar': typeof import("../components/Modal/Financiamento/Cadastrar.vue")['default']
+    'LazyModalFinanciamentoDetalhes': typeof import("../components/Modal/Financiamento/Detalhes.vue")['default']
     'LazyModalLojaSemente': typeof import("../components/Modal/LojaSemente.vue")['default']
     'LazyModalPagamentos': typeof import("../components/Modal/Pagamentos.vue")['default']
     'LazyModalSementeDetail': typeof import("../components/Modal/SementeDetail.vue")['default']
@@ -61,6 +65,8 @@ declare module 'vue' {
 }
 
 export const ModalEmpresaDetail: typeof import("../components/Modal/EmpresaDetail.vue")['default']
+export const ModalFinanciamentoCadastrar: typeof import("../components/Modal/Financiamento/Cadastrar.vue")['default']
+export const ModalFinanciamentoDetalhes: typeof import("../components/Modal/Financiamento/Detalhes.vue")['default']
 export const ModalLojaSemente: typeof import("../components/Modal/LojaSemente.vue")['default']
 export const ModalPagamentos: typeof import("../components/Modal/Pagamentos.vue")['default']
 export const ModalSementeDetail: typeof import("../components/Modal/SementeDetail.vue")['default']
@@ -89,6 +95,8 @@ export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyModalEmpresaDetail: typeof import("../components/Modal/EmpresaDetail.vue")['default']
+export const LazyModalFinanciamentoCadastrar: typeof import("../components/Modal/Financiamento/Cadastrar.vue")['default']
+export const LazyModalFinanciamentoDetalhes: typeof import("../components/Modal/Financiamento/Detalhes.vue")['default']
 export const LazyModalLojaSemente: typeof import("../components/Modal/LojaSemente.vue")['default']
 export const LazyModalPagamentos: typeof import("../components/Modal/Pagamentos.vue")['default']
 export const LazyModalSementeDetail: typeof import("../components/Modal/SementeDetail.vue")['default']

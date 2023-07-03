@@ -32,28 +32,33 @@ export default {
             },
             {
                 icon: "dash",
-                descricao: "Plantação",
-                to: "/plantacao"
+                descricao: "Financiamento",
+                to: "/financiamento"
             },
             {
                 icon: "dash",
-                descricao: "Produtos",
-                to: "/produtos"
+                descricao: "Escoamento",
+                to: "/escoamento"
             },
             {
                 icon: "dash",
-                descricao: "Contabilidade",
-                to: "/contabilidade"
+                descricao: "Market Place",
+                to: "/marketplace"
             },
             {
                 icon: "dash",
                 descricao: "Venda",
-                to: "/contabilidade"
+                to: "/vendas"
+            },
+            {
+                icon: "dash",
+                descricao: "Gestão",
+                to: "/gestao"
             },
             {
                 icon: "dash",
                 descricao: "Relatorios",
-                to: "/relatorio"
+                to: "/relatorios"
             },
         ]
     })
