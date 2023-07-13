@@ -118,14 +118,14 @@
                             <tr>
                                 <td>Nome </td>
                                 <td>Investimento</td>
-                                <td>% do investimento</td>
                                 <td>Capital de Retorno (30%)</td>
+                                <td>% do investimento</td>
                             </tr>
                             <tr v-for="financiador, index in financiadores" :key="index" >
                                 <td>{{ financiador.nome }} </td>
                                 <td>{{ (financiador.valor).toLocaleString('pt-br') }}Kz</td>
-                                <td> {{ (((financiador.valor / (dados.riscos + dados.giro) * 100)).toFixed(2)).toLocaleString('pt-br') }}%</td>
                                 <td>{{ ((financiador.valor * 6 * 30/100)).toLocaleString('pt-br') }}Kz</td>
+                                <td> {{ ((((financiador.valor* 6 * 30/100) / (dados.riscos + dados.giro) * 100)).toFixed(2)).toLocaleString('pt-br') }}%</td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -136,8 +136,8 @@
                             <tr>
                                 <td>Total</td>
                                 <td>{{ totalValorFinanciadores.toLocaleString('pt-br') }}Kz</td>
-                                <td> {{ (((totalValorFinanciadores / (dados.riscos + dados.giro) * 100)).toFixed(2)).toLocaleString('pt-br') }}%</td>
                                 <td>{{ ((totalValorFinanciadores * 6 * 30/100)).toLocaleString('pt-br') }}Kz</td>
+                                <td> {{ ((((totalValorFinanciadores * 6 * 30/100) / (dados.riscos + dados.giro) * 100)).toFixed(2)).toLocaleString('pt-br') }}%</td>
                             </tr>
                         </table>
                     </v-col>
