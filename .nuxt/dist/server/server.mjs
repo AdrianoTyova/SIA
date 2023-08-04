@@ -1,1 +1,1 @@
-export { default } from "file:///home/paulino/Documentos/GitHub/SIA/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
+export { default } from "file:///C:/Users/PC/Documents/SIIA/Novo%20SIIA/SIA/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"

@@ -1,577 +1,402 @@
+<style>
+.inicioInvestidor {
+    padding: 20px;
+}
+
+.inicioInvestidor h2 {
+    color: #0b5ed7;
+}
+
+.CardsInicioDashboard {
+    padding: 10px;
+}
+
+.PrimeiraTabelaFazendas {
+    margin: 13px;
+}
+
+.Fundothead {
+    background: #0b5ed7;
+    color: #fff;
+}
+
+.Fundothead th {
+    color: #fff;
+}
+.sia-card-1 {
+    position: relative;
+    background-color: #aaaaaa63;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.sia-card-1 td {
+    padding: 0 !important;
+}
+
+.sia-card-1 .icon-notf {
+    width: 60px;
+    height: 60px;
+    background-color: #aaaaaa63;
+    border-radius: 10px;
+}
+
+.sia-card-1 .title,
+.sia-card-1 .desc {
+    padding: 0 20px;
+}
+
+.icon-notf1 {
+    background: url(../public/img/provincias/Benguela.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.icon-notf2 {
+    background: url(../public/img/provincias/huila.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+/* Formatacao de estilo da modal para a abertura do processo do investimento */
+
+.dialog-bottom-transition-enter-active,
+.dialog-bottom-transition-leave-active {
+    transition: transform .2s ease-in-out;
+}
+
+/* Fim da Modal */
+</style>
+
 <template>
-<div class="plantacao">
-    <div class="divCimaPai">
-        <div class="img"></div>
-        <div class="dados">
-            <div class="Dados1">
-                <div class="d-flex justify-space-between align-center">
-                    <div>
-                        <h1>Hoje Quarta-feira</h1>
-                        <p class="text-white">Humpata - 17ºC</p>
-                    </div>
-                    <div>ol</div>
-                </div>
-            </div>
-            <div class="Dados2">
-                <div class="d-flex justify-center flex-column text-center">
-                    <h2>25 <span>ºC</span></h2>
-                    <h3>Temperatura</h3>
-                    <p>Média semanal</p>
-                </div>
-            </div>
-            <div class="Dados3">
-                <div class="d-flex justify-center flex-column text-center">
-                    <h2>20</h2>
-                    <h3>Hectares</h3>
-                    <p>para cultivo</p>
-                </div>
-            </div>
-            <div class="Dados4">
-                <div class="d-flex justify-center flex-column text-center">
-                    <h2>16</h2>
-                    <h3>Trabalhadores</h3>
-                    <p>Ativos</p>
-                </div>
-            </div>
-            <div class="Dados5">
-                <div class="d-flex justify-center flex-column text-center">
-                    <h2>5</h2>
-                    <h3>Produtos</h3>
-                    <p>Em plantação</p>
-                </div>
-            </div>
+    <div class="inicioInvestidor">
+        <h2>SIIA | FINANCIADOR</h2>
+        <p>Sistema Integrado de Investimento Agrário</p>
+    </div>
+
+    <v-container class="CardsInicioDashboard">
+        <v-row no-gutters>
+            <v-col :key="n" cols="4" sm="4">
+                <v-card class="mx-auto" max-width="330">
+                    <v-card-item title="Fazendas Cadastradas">
+
+                    </v-card-item>
+
+                    <v-card-text class="py-0">
+                        <v-row align="center" no-gutters>
+                            <v-col class="text-h5 Detalhealtura" cols="6">
+                                <p style="margin-left: 10px;">365</p>
+                            </v-col>
+
+                            <v-col cols="6" class="text-right">
+                                <v-icon color="error" icon="mdi-weather-hurricane" size="88"></v-icon>
+                            </v-col>
+                        </v-row>
+                    </v-card-text>
+
+                    <v-divider></v-divider>
+
+                </v-card>
+            </v-col>
+
+            <v-col :key="n" cols="4" sm="4">
+                <v-card class="mx-auto" max-width="330">
+                    <v-card-item title="Meus Investimentos">
+
+                    </v-card-item>
+
+                    <v-card-text class="py-0">
+                        <v-row align="center" no-gutters>
+                            <v-col class="text-h5 Detalhealtura" cols="6">
+                                <p style="margin-left: 10px;">23</p>
+                            </v-col>
+
+                            <v-col cols="6" class="text-right">
+                                <v-icon color="error" icon="mdi-weather-hurricane" size="88"></v-icon>
+                            </v-col>
+                        </v-row>
+                    </v-card-text>
+
+                    <v-divider></v-divider>
+
+                </v-card>
+            </v-col>
+
+            <v-col :key="n" cols="4" sm="4">
+                <v-card class="mx-auto" max-width="330">
+                    <v-card-item title="Investimentos com Retornos">
+
+                    </v-card-item>
+
+                    <v-card-text class="py-0">
+                        <v-row align="center" no-gutters>
+                            <v-col class="text-h5 Detalhealtura" cols="6">
+                                <p style="margin-left: 10px;">11</p>
+                            </v-col>
+
+                            <v-col cols="6" class="text-right">
+                                <v-icon color="error" icon="mdi-weather-hurricane" size="88"></v-icon>
+                            </v-col>
+                        </v-row>
+                    </v-card-text>
+
+                    <v-divider></v-divider>
+
+                </v-card>
+            </v-col>
+
+        </v-row>
+    </v-container>
+
+    <!-- tabela de fazendas com o meu investimento -->
+
+    <div class="inicioInvestidor">
+        <div class="sia-card-1">
+            <table>
+                <tr>
+                    <td rowspan="2">
+                        <div class="icon-notf1"></div>
+                    </td>
+                    <td style="vertical-align: bottom;">
+                        <h2 class="title">Fazendas com a minha aplicação de capital</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <p class="desc">Detalhes de todos os seus investimentos...</p>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
-    <div class="recomendados">
-        <div class="tituloH1Recomendado d-flex justify-space-around align-center">
-            <h1 class="text-green">Produtos Recomendados</h1>
-            <nuxt-link to="/plantacao/selecao">
-                <v-btn small elevation="3" color="green">Iniciar Plantação</v-btn>
-            </nuxt-link>
-        </div>
-        <div class="produtosAvo d-flex justify-center align-center">
-            <div class="produtosPai pt-8">
-                <div class="produtosFilho" v-for="produto, index in produtos" :key="index">
-                    <div class="produtosImg" :style="verImg(produto.img)">
-                    </div>
-                    <div class="produtoslegenda">
-                        <div class="DivHr"></div>
-                        <h2 class="text-green text-center">{{ produto.descricao }}</h2>
-                        <ModalLojaSemente :produto="produto" />
-                    </div>
-                </div>
-            </div>
+
+    <v-table height="300px" class="PrimeiraTabelaFazendas">
+
+        <thead class="Fundothead">
+            <tr>
+                <th class="text-white">
+                    Fazenda
+                </th>
+                <th class="text-white">
+                    Localidade
+                </th>
+                <th class="text-white">
+                    Capital Investido
+                </th>
+                <th class="text-white">
+                    Duração
+                </th>
+                <th class="text-white">
+                    Taxa de Retorno (%)
+                </th>
+                <th class="text-white">
+                    Processo
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr v-for="item in desserts" :key="item.name">
+                <td>{{ item.name }}</td>
+                <td>{{ item.localidade }}</td>
+                <td>{{ item.capital }}</td>
+                <td>{{ item.duracao }}</td>
+                <td>{{ item.taxa }}</td>
+                <td>
+                    <ModalProcesso />
+                </td>
+            </tr>
+        </tbody>
+    </v-table>
+
+    <!--  -->
+
+    <div class="inicioInvestidor">
+        <div class="sia-card-1">
+            <table>
+                <tr>
+                    <td rowspan="2">
+                        <div class="icon-notf2"></div>
+                    </td>
+                    <td style="vertical-align: bottom;">
+                        <h2 class="title">Sugestões de Investimento para sí</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <p class="desc">Investimentos que a sua carteira pode cobrir e render retornos...</p>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
-</div>
+
+    <v-table height="300px" class="PrimeiraTabelaFazendas">
+
+        <thead class="Fundothead">
+            <tr>
+                <th class="text-white">
+                    Fazenda
+                </th>
+                <th class="text-white">
+                    Produto
+                </th>
+                <th class="text-white">
+                    Localidade
+                </th>
+                <th class="text-white">
+                    Valor solicitado
+                </th>
+                <th class="text-white">
+                    Duração
+                </th>
+                <th class="text-white">
+                    Taxa de Retorno (%)
+                </th>
+
+                <th class="text-white">
+                    Investir
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr v-for="item in dessertsFazenda" :key="item.nameFazenda">
+                <td>{{ item.nameFazenda }}</td>
+                <td>{{ item.produtoFazenda }}</td>
+                <td>{{ item.localidadeFazenda }}</td>
+                <td>{{ item.capitalFazenda }}</td>
+                <td>{{ item.duracaoFazenda }}</td>
+                <td>{{ item.taxaFazenda }}</td>
+                <td>
+                    <ModalInvestir />
+                </td>
+            </tr>
+        </tbody>
+    </v-table>
 </template>
+
+
+
+<!-- Funcoes -->
+  
 
 <script>
 export default {
-    data: () => ({
-        produtos: [{
-                img: "/img/produtos/cenoura.jpeg",
-                descricao: "Cenoura",
-            },
-            {
-                img: "/img/produtos/batata.jpeg",
-                descricao: "Batata",
-            },
-            {
-                img: "/img/produtos/cebola.jpeg",
-                descricao: "Cebola",
-            },
-            {
-                img: "/img/produtos/tomate.jpeg",
-                descricao: "Tomate",
-            },
-            {
-                img: "/img/produtos/feijao.jpeg",
-                descricao: "Feijão",
-            },
-            {
-                img: "/img/produtos/couve.jpeg",
-                descricao: "Couve",
-            },
-            {
-                img: "/img/produtos/Repolho.jpeg",
-                descricao: "Repolho",
-            },
-            {
-                img: "/img/produtos/SementeBatata4.jpeg",
-                descricao: "Batata",
-            },
-        ]
-    }),
-    methods: {
-        verImg(img) {
-            return `background-image: url(${img})`
+    data() {
+        return {
+
+            // Funcao para abrir a modal de informacao do processo do investimento  
+
+
+
+            // Tabela de segestao de investimentos
+
+            dessertsFazenda: [
+                {
+                    nameFazenda: 'AgroSol',
+                    localidadeFazenda: 'Huila',
+                    capitalFazenda: '33.143.00',
+                    duracaoFazenda: '12 Meses',
+                    taxaFazenda: '16%', 
+                    produtoFazenda: 'Batata Rena Nacional', 
+                },
+
+                {
+                nameFazenda: 'Mumba',
+                    localidadeFazenda: 'Humpata',
+                    capitalFazenda: '13.113.00',
+                    duracaoFazenda: '7 Meses',
+                    taxaFazenda: '12%', 
+                    produtoFazenda: 'Tomate Nacional', 
+                },
+            ],
+
+
+            // Funcao para lista de investimentos feitos nas fazendas
+
+            desserts: [
+                {
+                    name: 'Mumba',
+                    localidade: 'Huila',
+                    capital: '1.400.00',
+                    duracao: '6 Meses',
+                    taxa: '2%',
+                    processo: 'Abrir'
+                },
+                {
+                    name: 'NNN',
+                    localidade: 'Huila',
+                    capital: '3.900.00',
+                    duracao: '2 Meses',
+                    taxa: '6%',
+                    processo: 'Abrir'
+                },
+                {
+                    name: 'Lubamba',
+                    localidade: 'Huila',
+                    capital: '4.100.00',
+                    duracao: '3 Meses',
+                    taxa: '9%',
+                    processo: 'Abrir'
+                },
+                {
+                    name: 'Luas',
+                    localidade: 'Huila',
+                    capital: '3.000.00',
+                    duracao: '12 Meses',
+                    taxa: '13%',
+                    processo: 'Abrir'
+                },
+                {
+                    name: 'Zacarias',
+                    localidade: 'Huila',
+                    capital: '13.900.00',
+                    duracao: '8 Meses',
+                    taxa: '7%',
+                    processo: 'Abrir'
+                },
+                {
+                    name: 'Lubamba',
+                    localidade: 'Huila',
+                    capital: '900.00',
+                    duracao: '6 Meses',
+                    taxa: '11%',
+                    processo: 'Abrir'
+                },
+                {
+                    name: 'Freitas',
+                    localidade: 'Huila',
+                    capital: '9.000.00',
+                    duracao: '9 Meses',
+                    taxa: '16%',
+                    processo: 'Abrir'
+                },
+                {
+                    name: 'AgroSol',
+                    localidade: 'Huila',
+                    capital: '3.900.00',
+                    duracao: '6 Meses',
+                    taxa: '6%',
+                    processo: 'Abrir'
+                },
+
+
+
+            ],
         }
-    }
+
+    },
 }
 </script>
 
-<style lang="scss" scoped>
-.plantacao {
-    padding: 10px;
+<!-- Funcao Para abertura da modal -->
 
-    .divCimaPai {
-        margin: 20px;
-        border-radius: 20px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: .6fr .4fr;
-        margin-top: 100px;
+<!-- Fim da Funcao de abertura da -->
 
-        >.img {
-            height: 400px;
-            border-radius: 10px;
-            background: url('/img/fazendas/fazenda.webp') no-repeat center;
-            background-size: cover;
-        }
-
-        >.dados {
-            width: 100%;
-            height: 400px;
-            background-color: #fff;
-            margin: auto;
-            padding: 0 20px;
-            border-radius: 10px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: 'a a'
-                'b c'
-                'd e';
-            gap: 20px;
-
-            >div {
-                box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.3);
-                border-radius: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 0 10px;
-
-                h2 {
-                    font-size: 30px;
-                    color: #43A047;
-
-                    span {
-                        font-size: 14px;
-                    }
-                }
-
-                h3 {
-                    font-size: 16px;
-                    color: #555;
-                }
-
-                p {
-                    font-size: 14px;
-                    color: #aaa;
-                }
-            }
-
-            .Dados1 {
-                grid-area: a;
-                background-image: linear-gradient(45deg, #43A047, #81C784);
-
-                >div {
-                    width: 100%;
-                    height: 100%;
-                    color: #fff;
-                    padding: 0 10px;
-
-                    h1 {
-                        font-size: 14px;
-                    }
-
-                    p {
-                        font-size: 23px;
-                    }
-                }
-            }
-
-            .Dados2 {
-                grid-area: b;
-            }
-
-            .Dados3 {
-                grid-area: c;
-            }
-
-            .Dados4 {
-                grid-area: d;
-            }
-
-            .Dados5 {
-                grid-area: e;
-            }
-
-        }
-    }
-
-    .recomendados {
-        margin-top: 40px;
-
-        .produtosAvo {
-            .produtosPai {
-                width: 90%;
-                // height: 400px;
-                margin: auto;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                gap: 20px 10px;
-                margin-bottom: 300px;
-
-                .produtosFilho {
-                    width: 200px;
-                    height: 250px;
-                    box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.3);
-                    border-radius: 10px;
-                    margin: auto;
-
-                    .produtosImg {
-                        width: 100%;
-                        height: 150px;
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-size: 80%;
-                        border-radius: 10px 10px 0 0;
-
-                    }
-
-                    .produtoslegenda {
-                        height: 100px;
-                        padding: 10px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        border-radius: 0 0 10px 10px;
-
-                        .DivHr {
-                            height: 2px;
-                            background-color: #ccc;
-                        }
-                    }
-
-                }
-            }
-
-        }
-    }
-}
-
-
-@media (max-width: 1200px) {
-    .plantacao {
-        .recomendados {
-            .produtosAvo {
-                .produtosPai {
-                    width: 100%;
-
-                    .produtosFilho {
-                        width: 180px;
-                        height: 230px;
-
-                        .produtosImg {
-                            width: 100%;
-                            height: 130px;
-                        }
-
-                        .produtoslegenda {
-                            height: 100px;
-                            padding: 10px;
-                        }
-
-                    }
-                }
-
-            }
-        }
-    }
-}
-
-@media (max-width: 900px){
-    .plantacao {
-        width: 100%;
-
-    .divCimaPai {
-        width: 100%;
-        grid-template-columns: 1fr;
-        >.img {
-            width: 95%;
-            height: 400px;
-            margin: auto;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
-
-        >.dados {
-            width: 100%;
-            height: 400px;
-            background-color: #fff;
-            margin: auto;
-            padding: 0 20px;
-            border-radius: 10px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: 'a a'
-                'b c'
-                'd e';
-            gap: 20px;
-
-            >div {
-                box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.3);
-                border-radius: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 0 10px;
-
-                h2 {
-                    font-size: 30px;
-                    color: #43A047;
-
-                    span {
-                        font-size: 14px;
-                    }
-                }
-
-                h3 {
-                    font-size: 16px;
-                    color: #555;
-                }
-
-                p {
-                    font-size: 14px;
-                    color: #aaa;
-                }
-            }
-
-            .Dados1 {
-                grid-area: a;
-                background-image: linear-gradient(45deg, #43A047, #81C784);
-
-                >div {
-                    width: 100%;
-                    height: 100%;
-                    color: #fff;
-                    padding: 0 10px;
-
-                    h1 {
-                        font-size: 14px;
-                    }
-
-                    p {
-                        font-size: 23px;
-                    }
-                }
-            }
-
-            .Dados2 {
-                grid-area: b;
-            }
-
-            .Dados3 {
-                grid-area: c;
-            }
-
-            .Dados4 {
-                grid-area: d;
-            }
-
-            .Dados5 {
-                grid-area: e;
-            }
-
-        }
-    }
-
-    .recomendados {
-        .tituloH1Recomendado{
-            // flex-direction: column;
-            h1{
-                font-size: 20px;
-                margin-bottom: 20px;
-            }
-        }
-            
-        }
-
-}
-}
-
-@media (max-width: 810px) {
-    .plantacao {
-        .recomendados {
-            .produtosAvo {
-                .produtosPai {
-                    width: 100%;
-                    grid-template-columns: 1fr 1fr 1fr;
-
-                    .produtosFilho {
-                        width: 180px;
-                        height: 230px;
-
-                        .produtosImg {
-                            width: 100%;
-                            height: 130px;
-                        }
-
-                        .produtoslegenda {
-                            height: 100px;
-                            padding: 10px;
-                        }
-
-                    }
-                }
-
-            }
-        }
-    }
-}
-
-@media (max-width: 600px) {
-    .plantacao {
-        .recomendados {
-            .produtosAvo {
-                .produtosPai {
-                    .produtosFilho {
-                        width: 150px;
-                        height: 200px;
-
-                        .produtosImg {
-                            height: 100px;
-                        }
-
-                    }
-                }
-
-            }
-        }
-    }
-}
-
-@media (max-width: 500px) {
-    .plantacao {
-        .recomendados {
-            .tituloH1Recomendado{
-            flex-direction: column;
-            h1{
-                font-size: 20px;
-                margin-bottom: 20px;
-            }
-        }
-            .produtosAvo {
-                .produtosPai {
-                    grid-template-columns: 1fr 1fr;
-                    .produtosFilho {
-                        width: 200px;
-                        height: 250px;
-
-                        .produtosImg {
-                            height: 150px;
-                        }
-
-                    }
-                }
-
-            }
-        }
-    }
-}
-
-@media (max-width: 430px) {
-    .plantacao {
-        .divCimaPai {
-        >.img {
-            height: 300px;
-        }
-
-    }
-        .recomendados {
-            .produtosAvo {
-                .produtosPai {
-                    .produtosFilho {
-                        width: 180px;
-                        height: 230px;
-
-                        .produtosImg {
-                            height: 130px;
-                        }
-
-                    }
-                }
-
-            }
-        }
-    }
-}
-
-@media (max-width: 390px) {
-    .plantacao {
-        .recomendados {
-            .produtosAvo {
-                .produtosPai {
-                    .produtosFilho {
-                        width: 150px;
-                        height: 200px;
-
-                        .produtosImg {
-                            height: 100px;
-                        }
-
-                    }
-                }
-
-            }
-        }
-    }
-}
-@media (max-width: 370px) {
-    .plantacao {
-        .divCimaPai {
-        >.img {
-            height: 300px;
-        }
-
-        >.dados {
-            width: 100%;
-            height: 650px;
-            grid-template-columns: 1fr;
-            grid-template-areas: 'a a'
-                'b b'
-                'c c'
-                'd d'
-                'e e';
-
-            // >div {
-
-            //     h2 {
-            //         font-size: 30px;
-            //         color: #43A047;
-
-            //         span {
-            //             font-size: 14px;
-            //         }
-            //     }
-
-            //     h3 {
-            //         font-size: 16px;
-            //         color: #555;
-            //     }
-
-            //     p {
-            //         font-size: 14px;
-            //         color: #aaa;
-            //     }
-            // }
-
-        }
-    }
-      
-    }
-}
-
-</style>

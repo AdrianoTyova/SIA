@@ -6,10 +6,10 @@
     "module": true,
     "resourceType": "script"
   },
-  "/home/paulino/Documentos/GitHub/SIA/node_modules/nuxt/dist/app/entry.mjs": {
+  "C:/Users/PC/Documents/SIIA/Novo SIIA/SIA/node_modules/nuxt/dist/app/entry.mjs": {
     "resourceType": "script",
     "module": true,
     "isEntry": true,
-    "file": "/home/paulino/Documentos/GitHub/SIA/node_modules/nuxt/dist/app/entry.mjs"
+    "file": "C:/Users/PC/Documents/SIIA/Novo SIIA/SIA/node_modules/nuxt/dist/app/entry.mjs"
   }
 }

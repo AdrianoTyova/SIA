@@ -1,83 +1,136 @@
 <template>
-<div style="overflow: hidden;">
-    <div class="principal d-flex">
-        <div class="PSide">
-            <SideMenu />
+    <div ref="container">
+        <div @click="toggleMenu()" ref="fadeContet" id="fade-content" class="fade-content"></div>
+        <div id="nav-bar" ref="navBar" class="nav-bar row">
+            <table>
+                <tr>
+                    <td class="mobile"><button class="btn" @click="toggleMenu()"><i class="material-icons">menu</i></button>
+                    </td>
+                    <td width="100%">
+                        <form action="#">
+                            <input id="pesquisa" type="search" placeholder="Pesquisa...">
+                        </form>
+                    </td>
+                    <td><button class="btn transparent"><v-icon icon="notifications" /></button></td>
+                    <td><button class="btn transparent"><v-icon icon="settings" /></button></td>
+                </tr>
+            </table>
         </div>
-        <div class="PContainer">
-            <NuxtPage />
-        </div>
-        <div class="menubaixo pa-5 ">
-            <ul class="bg-green pa-5 d-flex justify-space-between align-center">
-                <li>
-                    <nuxt-link to="/">Inicio</nuxt-link>
-                </li>
-                <li>
-                    <nuxt-link to="/plantacao/selecao">Processos</nuxt-link>
-                </li>
-                <li>
-                    <nuxt-link to="/vendas/provincias">Venda</nuxt-link>
-                </li>
-            </ul>
+        <div class="main">
+            <div id="menu" ref="menu" class="side-bar white">
+                <ul>
+                    <li class="item"><a href="#" @click="toggleMenu()" class="logo"><img src="/logo-icon.png" alt=""></a>
+                    </li>
+
+                    <li v-for="m, index in menus" :key="index" :to="m.to" class="item">
+                        <nuxt-link :to="m.to"
+                            @click="toggleMenu()" class="link" :class="$route.path === m.to ? 'active' : ''">
+                            <v-icon :icon="m.icon" />
+                            <span>{{ m.descricao }}</span>
+                        </nuxt-link></li>
+
+                </ul>
+            </div>
+            <div class="content">
+                <NuxtPage />
+            </div>
         </div>
     </div>
-</div>
+
+    
 </template>
+    
+<script>
+export default {
 
-<style lang="scss">
-.menubaixo {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: none;
+    mounted() {
+        this.toggleMenu()
+        window.addEventListener('resize', this.resize)
+        this.resize()
+    },
 
-    ul {
-        margin: auto;
-        width: 100%;
-        list-style: none;
-        border-radius: 18px;
-        box-shadow: 0 0 5px #ccc;
-
-        li {
-            a {
-                color: #fff;
+    data: () => ({
+        largura: 1080,
+        menus: [{
+            icon: "dashboard",
+            classe: "material-icons",
+            descricao: "Dashboard",
+            to: "/"
+        },
+        {
+            icon: "home",
+            classe: "material-icons",
+            descricao: "Fazendas",
+            to: "/marketplace"
+        },
+        {
+            icon: "chat",
+            classe: "material-icons",
+            descricao: "Gráficos",
+            to: "/marketplaceS"
+        },
+        {
+            icon: "person",
+            classe: "material-icons",
+            descricao: "Perfil",
+            to: "/marketplaceS"
+        },
+        // {
+        //     icon: "credit_score",
+        //     classe: "material-icons",
+        //     descricao: "Financiamento",
+        //     to: "/financiamento"
+        // },
+        // {
+        //     icon: "local_shipping",
+        //     classe: "material-icons-outlined",
+        //     descricao: "Escoamento",
+        //     to: "/escoamento"
+        // },
+        // {
+        //     icon: "store",
+        //     classe: "material-icons",
+        //     descricao: "Market Place",
+        //     to: "/marketplace"
+        // },
+        // {
+        //     icon: "storefront",
+        //     classe: "material-icons",
+        //     descricao: "Venda",
+        //     to: "/vendas"
+        // },
+        // {
+        //     icon: "inventory",
+        //     classe: "material-icons",
+        //     descricao: "Gestão",
+        //     to: "/gestao"
+        // },
+        // {
+        //     icon: "receipt_long",
+        //     classe: "material-icons",
+        //     descricao: "Relatorios",
+        //     to: "/relatorios"
+        // },
+        ]
+    }),
+    methods: {
+        resize() {
+            let container = window.innerWidth;
+            console.log("largura " + container)
+            if (container > 700) {
+                let largMenu = this.$refs.menu.offsetWidth;
+                let LARG = container - largMenu + 1;
+                this.$refs.navBar.style.width = LARG + 'px';
+            } else {
+                let LARG = container;
+                this.$refs.navBar.style.width = LARG + 'px';
             }
+
+        },
+        toggleMenu() {
+            this.$refs.menu.classList.toggle("show");
+            this.$refs.fadeContet.classList.toggle("show");
         }
     }
 }
-
-.principal {
-    display: grid;
-    grid-template-columns: .3fr .7fr;
-    min-height: 700px;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.PSide {
-    width: 350px;
-}
-
-.PContainer {
-    width: 100%;
-    overflow-y: scroll;
-}
-
-a {
-    text-decoration: none;
-}
-
-@media (max-width: 1050px) {
-    .principal {
-        grid-template-columns: 1fr;
-    }
-
-    .PSide {
-        width: 0;
-    }
-    .menubaixo{
-        display: block;
-    }
-}
-</style>
+</script>

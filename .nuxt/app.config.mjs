@@ -1,5 +1,5 @@
 
-import { defuFn } from '/home/paulino/Documentos/GitHub/SIA/node_modules/defu/dist/defu.mjs'
+import { defuFn } from 'C:/Users/PC/Documents/SIIA/Novo SIIA/SIA/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {}
 
